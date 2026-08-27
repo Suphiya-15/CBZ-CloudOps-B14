@@ -1,0 +1,13 @@
+                                     Function
+
+--> A function is a block of code that perform a specific task.
+**Defining and calling function**:
+
+def function_name():
+        #code block that performs a task
+
+function_name()
+
+
+
+

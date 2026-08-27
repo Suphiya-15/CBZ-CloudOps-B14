@@ -93,3 +93,144 @@ while password != correct_password :
 print("Access Granted")
 
 -------------------------------------------------------------------------------------
+
+Program 11: List example
+fruits = ["Apple","Cherry","Orange","Apple",1,2,3,1]
+print(fruits)
+
+fruits.append("Mango")
+print(fruits)
+
+fruits.remove("Cherry")
+print(fruits)
+
+fruits.insert(1,"banana")
+print(fruits)
+
+-------------------------------------------------------------------------------------------
+
+Program 12: Tuple example
+colors = ("red", "green","blue","black")
+print(colors)
+print(len(colors))
+
+more_colors = ("Yellow","Purple")
+all_colors = colors + more_colors
+print(all_colors)
+
+-----------------------------------------------------------------------------------------------
+
+Program 13 : Dictionary example
+my_dictionary = {"name":"seema","age":25,"city":"mumbai"}
+print(my_dictionary)
+
+print(my_dictionary["city"])
+
+my_dictionary["email"] = "seema1023@gmail.com"
+print(my_dictionary)
+
+my_dictionary.pop("age")
+print(my_dictionary)
+
+--------------------------------------------------------------------------------------------
+Program 14: Set example
+my_set = {1,2,3,"seema","Amit",3}
+print(my_set)
+
+my_set.add("Atul")
+print(my_set)
+
+my_set.remove(2)
+print(my_set)
+---------------------------------------------------------------------------------------------
+
+program 15: function argument example
+
+def greet(name):
+    print(f"Hello {name}..! Welcome to the python session")
+
+greet("Seema")
+greet("Amit")
+greet("Zoya")
+greet("Atul")
+
+------------------------------------------------------------------------------------------
+
+program 16: basic function example
+
+def greet()
+    print("Hello everyone..!")
+
+greet()
+greet()
+
+-----------------------------------------------------------------------------------------
+
+program 17: addition example
+
+
+def sum(a,b):
+    print(f"Addition is: {a+b}")
+
+sum(100,12)
+sum(45,45)
+sum(50,50)
+sum(5,15)
+
+------------------------------------------------------------------------------------------
+
+program 18: return example
+
+def sum(a,b):
+    return a+b , a-b , a*b
+
+add, sub ,multiplication = sum(100,12)
+print("Addition is:",add)
+print("Subtraction is:",sub)
+print("Multiplication is:", multiplication)
+
+-----------------------------------------------------------------------------------------
+
+program 19: Devops example
+
+
+def check_cpu(cpu):
+    if cpu > 80:
+        print("CPU usage is HIGH")
+    else:
+        print("CPU usage is NORMAL")
+
+def check_disk(disk):
+    if disk > 75:
+        print("Disk usage is HIGH")
+    else:
+        print("Disk usage is NORMAL")
+
+def check_memory(memory):
+    if memory > 90:
+        print("Memory usage is HIGH")
+    else:
+        print("Memory usage is NORMAL")
+
+def monitoring(cpu,memory,disk):
+    print("-----Server Monitoring-----")
+    check_cpu(cpu)
+    check_memory(memory)
+    check_disk(disk)
+
+monitoring(80,75,96)
+
+-----------------------------------------------------------------------------------------------
+
+program 20: Scope of variable
+
+x = 20
+def my_function():
+    global x
+    x = 10#local variable
+    print(x)
+
+my_function()
+print(x)
+
+----------------------------------------------------------------------------------------------------
