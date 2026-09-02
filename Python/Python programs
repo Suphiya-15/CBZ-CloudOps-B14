@@ -234,3 +234,140 @@ my_function()
 print(x)
 
 ----------------------------------------------------------------------------------------------------
+
+program 21: math module
+
+import math
+
+num = int(input("Enter a Number:"))
+
+print("Square root:", math.sqrt(num))
+print("Power (number^2):", math.pow(num,2))
+print("Factorial:", math.factorial(num))
+
+------------------------------------------------------------------------------------------------------
+
+program 22: time module
+
+import time
+
+current_time= time.time()
+print("Current timestamp:", current_time)
+print("Current local time:", time.ctime())
+print("Waiting for 5 seconds....")
+time.sleep(5)
+print("5 seconds completed")
+
+------------------------------------------------------------------------------------------------------
+
+program 23: strftime()
+
+import time
+
+current_time= time.localtime()
+
+formatted_time = time.strftime("%y-%m-%d %H:%M:%S", current_time)
+print("Current time:", formatted_time)
+
+-----------------------------------------------------------------------------------------------------
+
+program 24: os module
+
+import os 
+print("Current Directory:", os.getcwd())
+print("File list:", os.listdir())
+print("Create demo directory")
+os.mkdir("demo")
+
+---------------------------------------------------------------------------------------------------
+
+program 25: Numpy basic program
+
+import numpy as np
+
+numbers = np.array([10,20,30,40,50])
+print("Array:", numbers)
+
+print("Addition:", numbers + 5)
+print("Multiplication:", numbers * 2)
+
+print("Sum:", np.sum(numbers))
+print("Avg:", np.mean(numbers))
+print("Maximum:", np.max(numbers))
+print("Minimum:", np.min(numbers))
+
+-----------------------------------------------------------------------------------------------
+
+program 26: CSV file example
+
+import csv
+
+data = [
+    ["Name","Age","City"],
+    ["Seema",25,"Mumbai"],
+    ["Atul", 28,"Pune"],
+    ["Amit", 20, "Nagpur"]
+]
+
+with open("demo.csv","w",newline="") as file:
+    writer = csv.writer(file)
+    writer.writerows(data)
+
+print("Data written Successfully")
+
+--------------------------------------------------------------------------------------------
+
+Program 27: CSV reader
+
+import csv
+
+with open("demo.csv","r") as file:
+    reader = csv.reader(file)
+
+    for i in reader:
+        print(i)
+
+----------------------------------------------------------------------------------------------
+
+program 28: Devops CSV example
+
+import csv
+
+server = [
+    ["Server","IP","Environment"],
+    ["AppServer","192.168.50.23","Production"],
+    ["TestServer","192.56.78.13","Testing"],
+    ["DevServer","192.30.10.10","Devlopment"]
+]
+
+with open("serverinfo.csv","w",newline="") as file:
+    writer = csv.writer(file)
+    writer.writerows(server)
+
+print("\nServer Information:")
+
+with open("serverinfo.csv","r") as file:
+    reader = csv.reader(file)
+
+    for row in reader:
+        print(row)
+
+------------------------------------------------------------------------------------------
+
+program 29: JSON
+
+import json
+
+data = {
+    "name":"semma"
+}
+
+json.dump(data,file)
+
+json.load(file)
+print("Name:",data["name"])
+
+----------------------------------------------------------------------------------------------
+
+
+

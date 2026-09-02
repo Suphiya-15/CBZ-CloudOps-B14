@@ -1,0 +1,13 @@
+                                    Subprocess
+            
+--> os module vs subprocess module
+
+                OS module                                   Subprocess module 
+
+          inetract with the os                      mainly runs external commands
+
+    good for files, directories, processes        good for executing linux/windows commands
+
+          simpler for basic task                   beteer for devops/automation command
+
+

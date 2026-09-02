@@ -1,0 +1,18 @@
+Module and Library:
+--> Module in python is simply a file that contains python code.
+--> this code can include python functions, classes and variables.
+--> to use a module in python, you need to import it. the import statement allows you to bring 
+in the code from the module into your program
+
+--> types of module:
+1. math module
+2. time module
+3. os module
+
+1. math module
+--> The math module provides mathamatical functions like square root, trigonometric functions and meny more
+
+Library:
+--> 
+
+eg: NumPy, pandas, matplotlib 

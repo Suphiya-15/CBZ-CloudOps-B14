@@ -1,0 +1,39 @@
+File Handling:
+--> File handling is the process of opening, reading, writing and closing a file in program
+
+**Opening a file:
+syntax:
+file = open("File_name","mode")
+
+--> file modes:
+1. "r" = read mode = Opens the file for reading. if the file does not exist, it will throw an error
+
+2. "w" = write mode = Opens the file for writing. if the file exist, it will overwrite the content.
+                      if the file does not exist, it will create new one.
+
+3. "a" = append mode = Opens the file for appending. if the file exist, it will add new data at the end of the file.
+                       if the file does not exist, it will create a new  one.
+
+eg:
+file = open("example.txt","r")
+
+**writing a file:
+
+file = open("example.txt","w")
+file.write("Hello everyone")
+file.close()
+
+**Appending a file:
+
+file = open("example.txt","a")
+file.write("\nthis is new line")
+filoe.close()
+
+**Reading a file:
+file = open("user.txt","r")
+content = file.read()
+print(content)
+file.close()
+
+                                     **CSV file**
+                                     
