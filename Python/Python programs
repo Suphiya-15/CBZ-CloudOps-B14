@@ -369,5 +369,41 @@ print("Name:",data["name"])
 
 ----------------------------------------------------------------------------------------------
 
+Program 30: boto3 s3 example
 
+import boto3
 
+s3 = boto3.client("s3")
+response = s3.list_buckets()
+
+for bucket in response["Buckets"]:
+    print(bucket["Name"])
+
+------------------------------------------------------------------------------------------------
+
+program 31: boto3 s3 file upload example
+
+import boto3
+
+s3 = boto3.client("s3")
+
+bucket_name = "source-bucket-45862"
+file_name = "demo.txt"
+
+s3.upload_file(file_name, bucket_name, file_name)
+print("File uploaded Successfully")
+
+------------------------------------------------------------------------------------------------
+
+program 32: copy object example
+
+import boto3
+
+s3 = boto3.client("s3")
+
+source_bucket = "source-bucket-45862"
+destination_bucket = "dest-bucket-1238"
+
+response = s3.list_objects("Bucket=source_bucket")
+
+if 'Contents'
