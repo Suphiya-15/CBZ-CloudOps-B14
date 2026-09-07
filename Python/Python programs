@@ -406,4 +406,24 @@ destination_bucket = "dest-bucket-1238"
 
 response = s3.list_objects("Bucket=source_bucket")
 
-if 'Contents'
+if 'Contents' in response:
+    for obj in response['Contents']:
+        key = obj['Key']
+        print(f"Copying {key}..")
+
+        copy_source = {"Bucket": source_bucket,"Key": key}  
+
+        s3.copy_object(CopySource = copy_source, Bucket = destination_bucket, Key = key)
+
+        print("All objects copied successfully..!")
+
+else: 
+    print("No objects found in source bucket")
+
+-------------------------------------------------------------------------------------------------
+
+Program 33: Automated backup of EBS volume using boto3
+
+import boto3
+
+ec2 = boto3.client("ec2", region_name= "ap-south-1")
