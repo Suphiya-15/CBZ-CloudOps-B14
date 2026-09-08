@@ -427,3 +427,33 @@ Program 33: Automated backup of EBS volume using boto3
 import boto3
 
 ec2 = boto3.client("ec2", region_name= "ap-south-1")
+
+
+------------------------------------------------------------------------------------------------
+
+Program 34: Docker lifecycle
+
+import docker
+import time
+
+client = docker.from_env()
+
+print("Pulling nginx image..")
+client.images.pull("nginx")
+
+print("Starting Container..")
+container = client.containers.run("nginx", detach=True, ports={"80/tcp":8080})
+
+print("Container ID:",container.id)
+
+time.sleep(3)
+
+print("Container Status:", container.status)
+
+print("Logs:\n", container.logs().decode())
+
+print("Stopping Container..")
+container.stop()
+
+print("Removing Container..")
+container.remove()
