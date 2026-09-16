@@ -1,0 +1,33 @@
+                                             FileStore
+                                                 -----> EFS in AWS
+
+**Differences:
+1. Provider 
+filestore ---> GCP
+EFS ----> AWS
+
+2. Scaling model
+filestore uses service tiers with different capacity or scaling charactristics.
+
+"They both solve the same problem, but their capacity, performance tiers, sacling and pricing models are different."
+
+**demo :Filestore
+
+1. create one filestore instance
+2. create two ubuntu instances in same region
+3. connect
+sudo su -
+apt update
+apt install nfs-common -y
+mkdir /mnt/nfs
+mount filestorIP:/file-share_name  /mnt/nfs
+
+here:
+
+filestore instance name: filestoreS
+File share name:  demo
+Directory on VM: /mnt/nfs
+filestore_IP: filestoreIP
+
+take this demo file share from my filestore and attach/mount it at /mnt/nfs on this VM.
+

@@ -28,11 +28,21 @@ IOPS: Input Output operation per Second
 ---> if disk offers 3000iops it can perform 3000 read or writes per second.
 
 **Instance Purchasing options:
-1. On-demand Instance
-2. Commited use Discount (CUD)
-3. Spot Instance
-4. Reservation
-5. Sole Tenant Instance
-6. Sustained Use Discount  
+1. On-demand Instance ---> AWS On-demand
+2. Commited use Discount (CUD) ---> Saving plan in AWS
+3. Spot Instance --> Spot instance in AWS
+4. Reservation --> Capacity Reservation in AWS
+5. Sole Tenant Instance ---> Dedicated host in AWS
+6. Sustained Use Discount  --> Automatic
+--> discount automatically applied if VM runs a significant portion of the month.
+--> No commmitment is required. discount is based on usage time.
+
+         Monthly usage                                           Discount
+           0% - 25%                                                 0%
+           25% - 50%                                                20%
+           50% - 75%                                                40%
+           75% - 100%                                               60%
+
+           
 
 
