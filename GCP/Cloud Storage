@@ -1,0 +1,36 @@
+                                                Cloud Storage
+                                                     --------> S3 in AWS
+
+**Where to store data:
+1. Multi-region
+2. Dual region
+3. region
+
+1. multi region:
+--> data automatically stored across multiple regions in a continets.
+--> google choose the best regions for replication.
+--> best for global availability, content delivery
+
+2. Dual regions:
+--> data stored in two nearby regions.
+--> cost is higher than regional
+
+3. region:
+--> Data stored in single region.
+--> used when you want low latency
+
+**Storage class in GCP:
+1. Standard:(default storage) Frequently accessed data
+2. Nearline: infrequently accessed data
+   ---> min duration: 30days
+   ---> data retrival cost: $0.010/gb/month
+3. Coldline: Rarely accessed data
+   ---> once in a quarter
+   ---> min storage: 90days
+4. Archive: Long=lived data
+   ---> latency is low.
+   ---> ideal for store and forget
+5. Autoclass: 
+   ---> Automatically transitions each object to Standard or Nearline class based on object-level activity, to optimize for cost and latency.
+
+   

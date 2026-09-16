@@ -1,0 +1,38 @@
+                                        Compute Engine
+                                              ---------> EC2 in AWS
+    
+--> server / VM /virtual machine / node / machine / instanace 
+
+--> Steps to create instance in GCP:                           AWS
+1. name                                             1. Tags
+2. Machine type                                     2. Instance type
+3. OS                                               3. AMI
+4. Storage = PD                                     4. Storage = EBS = SSD / HDD / MAgnetic Standard
+----> Balanced PD                                   ----------> 7 options
+----> Standard PD
+----> SSD PD
+----> Extreme PD
+
+5. Firewall                                         5. Security group
+
+
+
+HDD / SSD
+
+throughput: the amount of data transferred per second. 
+----> measured in mb/s 
+---> if your disk has 205mb/s throughput means it can transfer 250 mb/s of data per second 
+
+IOPS: Input Output operation per Second
+---> it measures how many read or write operations a storage system can handle per second.
+---> if disk offers 3000iops it can perform 3000 read or writes per second.
+
+**Instance Purchasing options:
+1. On-demand Instance
+2. Commited use Discount (CUD)
+3. Spot Instance
+4. Reservation
+5. Sole Tenant Instance
+6. Sustained Use Discount  
+
+

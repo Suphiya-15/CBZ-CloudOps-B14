@@ -1,0 +1,23 @@
+                                       GCP
+                                Google Cloud Provider
+
+**GCP Resource Hierarchy:
+---> In GCP resources are organized in a heirarchical structure. 
+---> This hierarchy helps us manage access, policies, resources and billing in an organized way.
+
+1. Organization
+2. Folders
+3. Project
+4. Resources
+
+1. it representing an entire company.
+eg: Cloudblitz
+
+2. folders are used to group projects.
+
+3. Project is the most imo concept in GCP
+--> All GCP resources are created inside a project.
+
+4.  resources are the actual GCP services that you create and manage
+eg: instance, bucket, databases etc
+

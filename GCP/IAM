@@ -1,0 +1,32 @@
+                                                 IAM
+                                        Identity and Access Management
+                                                   --------> IAM in AWS
+
+    **IAM Identities:
+    1. Role
+    2. Policy
+    3. Permission
+    4. Principle
+    5. Resources
+
+    1. IAM role
+    -->Roles are composed of sets of permissions and determine what the principal can do with this resource.
+
+    --> Types of roles:
+    ----> 1. Basic role : owner, editor, viewer and browser
+    ----> 2. Predefined role: these roles are created by Google.
+    ----> 3. custom role: let you create your own roles by picking soecific permission.
+
+    2. policy:
+    ----> it is a colllcetion of roles binding togather that define who has what access to which resources.
+
+    3. permission: 
+    ----> defines a specific operation that an identity can perform
+
+    4. Principal:
+    ----> it is an identity that wants to access a resources
+    ----> eg: user, group, domain etc
+
+    
+
+
