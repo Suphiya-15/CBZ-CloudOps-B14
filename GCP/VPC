@@ -1,0 +1,27 @@
+                                                VPC
+                                        Virtual Private Cloud
+                                                ------------> VPC in AWS
+
+
+
+10.0.0.0/26 ----> 64 IP adress
+
+/24  ----> 256
+
+512 servers then CIDR??  ----> /23
+
+Steps to create VPC:
+1. create vpc: name, CIDR
+2. create subnet: 
+3. create igw
+4. create route tables
+
+
+** Difference:
+
+1. GCP VPC scope ---> Global 
+
+2. Firewall = Security group + NACL
+
+
+

@@ -1,0 +1,10 @@
+                                             Alerting
+                                                ------> Cloudwatch in AWS
+
+    --> it is a fully managed service by GCP that helps you to collect and view matrics, logsetc
+    --> create alerting policies
+    --> build dashboard
+    --> monitoring resources
+    --> get notified when problem occurs
+
+    

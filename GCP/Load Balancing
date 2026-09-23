@@ -1,0 +1,29 @@
+                                    Load Balancing
+                                         ------> ELB in AWS
+
+AWS Load Balancer: Region
+target group --> backend servers
+
+
+GCP Load balancer: Global
+instance group --> backend servers
+
+**Steps to create Load balancer
+1. create Instance group ---> target group
+2. create instance template  
+3. create Load balncer
+ ---> select LB --> application / network
+ ---> select internal or public facing
+ ---> select global or regional
+
+ 4. configure LB
+ --> LB name
+ --> select Region
+ --> select network--> VPC
+ --> create proxy subnet
+ -----> it is a special internal network used by GCP LB to send traffic to backend VMs
+
+ --> frontend configure
+ --> backend configure
+ --> done
+
