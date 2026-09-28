@@ -22,3 +22,21 @@ what is shebang line?
 ----> shebang refers to # and !. in musical notation # called sharp and ! called bang
 ----> shebang line specifing the interpreter.
 
+**How to run a script:
+1. make sure script has execute permission
+2. run using:
+i] syntax1 =   ./<script_name>
+eg: ./1.sh
+--> if you are in same directory as the script use relative path
+
+ii] syntax2 =  /path/<script_name>
+eg: /etc/1.sh
+--> if you are in different directory use absolute path
+
+iii] syntax3 = bash <script_name>
+eg: bash 1.sh
+--> you are explicitly tell the shell to execute the script using a specific interpreter,  even if it 
+does not have execute permission or a shebang line.
+
+
+

@@ -1,0 +1,45 @@
+script 1: basic 
+
+#!/bin/bash
+echo "Hello..! Welcome to cloudblitz..."
+---------------------------------------------------------------------------------------------------------
+
+script 2: variables
+
+# To access variable use $ with variable name
+
+a=10
+name="seema"
+age=25
+
+echo "Name is $name and age is $age"
+-------------------------------------------------------------------------------------------------------
+
+script 3: contant variable
+
+#use readonly keyword for contstand variable
+
+readonly college="xyz"
+echo "College Name is $college"
+
+college="Metro"
+echo "College name is $college"
+------------------------------------------------------------------------------------------------------
+
+script 4: comments
+
+#use # for single line comment
+#use << for multi line comment
+
+#!/bin/bash
+
+echo "Cheking comments"
+#this is single line comment
+
+echo "Cheking multiline comments"
+<< comment
+this 
+is
+multi
+line
+comment
