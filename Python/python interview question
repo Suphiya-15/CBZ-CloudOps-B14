@@ -1,0 +1,139 @@
+                                  Interview Question
+
+1. What is Python and why is it useful for DevOps?
+-->Python is a high-level scripting language commonly used in DevOps because it is easy to write,
+ has extensive libraries, and integrates well with operating systems, cloud platforms, APIs,
+  and CI/CD tools.
+Typical DevOps uses:
+Automating deployments
+Managing files and directories
+Executing shell commands
+Calling REST APIs
+Parsing logs
+Managing AWS/GCP/Azure resources
+Writing monitoring and health-check scripts
+Automating repetitive operational tasks
+
+2. What is the difference between a list and a tuple?
+--> List is mutable.
+Tuple is immutable.
+
+my_list = [1, 2, 3]
+my_list.append(4)
+
+my_tuple = (1, 2, 3)
+
+In DevOps scripts, lists are useful when values need to change, while tuples are useful for fixed collections.
+
+3. What is a dictionary?
+--> A dictionary stores data as key-value pairs.
+
+server = {
+    "name": "web01",
+    "ip": "10.0.0.10",
+    "status": "running"
+}
+
+print(server["ip"])
+
+Dictionaries are extremely common when working with JSON and cloud APIs.
+
+4. What is a Python function?
+--> A function is a reusable block of code.
+
+def check_server_status(server):
+    return f"Checking {server}"
+
+print(check_server_status("web01"))
+
+Functions make automation scripts easier to maintain and reuse.
+
+5. What is exception handling?
+--> Exception handling allows a script to handle errors without unexpectedly terminating.
+
+try:
+    with open("config.txt") as f:
+        data = f.read()
+except FileNotFoundError:
+    print("File not found")
+except Exception as e:
+    print(f"Error: {e}")
+
+For DevOps automation, proper exception handling is important because scripts often interact with external systems.
+
+6. How do you read a file in Python?
+with open("servers.txt", "r") as file:
+    for line in file:
+        print(line.strip())
+
+Using with ensures that the file is properly closed.
+
+7. How do you check whether a file exists?
+from pathlib import Path
+
+if Path("/tmp/app.log").exists():
+    print("File exists")
+else:
+    print("File does not exist")
+
+8. How do you find all .log files in a directory?
+from pathlib import Path
+
+for file in Path("/var/log").glob("*.log"):
+    print(file)
+
+For recursive searching:
+
+for file in Path("/var/log").rglob("*.log"):
+    print(file)
+
+9. How do you copy a file?
+import shutil
+
+shutil.copy("source.txt", "backup.txt")
+
+10. How do you delete a file?
+from pathlib import Path
+
+Path("old.log").unlink()
+
+In production automation, I would first validate the path and make sure the deletion is intentional.
+
+11. How do you execute a Linux command using Python?
+-->Use the subprocess module.
+
+import subprocess
+
+result = subprocess.run(
+    ["df", "-h"],
+    capture_output=True,
+    text=True,
+    check=True
+)
+
+print(result.stdout)
+
+subprocess is preferred over older approaches such as os.system() because it provides better control over input, output, and errors.
+
+12. How do you run a shell command and capture its output?
+import subprocess
+
+result = subprocess.run(
+    ["systemctl", "status", "nginx"],
+    capture_output=True,
+    text=True
+)
+
+print(result.stdout)
+print(result.stderr)
+
+13. How do you check the exit status of a command?
+import subprocess
+
+result = subprocess.run(["ls", "/tmp"])
+
+if result.returncode == 0:
+    print("Command successful")
+else:
+    print("Command failed")
+

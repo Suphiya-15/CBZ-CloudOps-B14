@@ -1,0 +1,24 @@
+Shell Scripting:
+
+1. shell : it is an interface between user and OS
+
+2. Types of shell:
+--> sh (Bourn shell)
+--> ksh (korn shell)
+--> csh (C shell)
+--> zsh (z shell)
+--> fish 
+--> bash 
+
+to check out current shell: $SHELL or $0 
+check all system supported shell: /etc/shells file
+
+Shell scritpting:
+--> Shell scripting is the process of writing a set of linux commands in afile so that they can execute automatically.
+
+what is shebang line?
+--> #!/bin/bash
+----> it is used to instruct OS to use bash as a command interpreter
+----> shebang refers to # and !. in musical notation # called sharp and ! called bang
+----> shebang line specifing the interpreter.
+

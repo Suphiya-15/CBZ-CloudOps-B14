@@ -1,0 +1,172 @@
+                                    GCP Interview Question
+
+1. What is GCP?
+--> Google Cloud Platform (GCP) is a cloud computing platform provided by Google. It offers services for computing, storage, databases, networking, analytics, containers, AI/ML, security, and DevOps.
+
+2. What is a GCP Project?
+--> A Project is the fundamental organizational unit in GCP where resources are created and managed
+
+3. What is the difference between Region and Zone?
+--> Region: A geographic area containing multiple zones.
+Zone: An isolated location within a region where resources such as VMs can run.
+
+For example, a region can contain multiple zones. Deploying an application across multiple zones can improve availability if one zone experiences a failure.
+
+4. What is IAM in GCP?
+--> IAM stands for Identity and Access Management. It controls who can access which resources and what actions they can perform.
+
+5. What is Compute Engine?
+--> Compute Engine provides virtual machines (VMs) running on Google's infrastructure.
+We can configure:
+Machine type
+CPU and memory
+Boot disk
+Network
+Firewall rules
+Service account
+Autoscaling through managed instance groups
+
+It provides more control over the operating system and infrastructure than serverless services such as Cloud Run.
+
+6. What is Cloud Storage?
+--> Cloud Storage is GCP's object storage service.
+It stores data as objects inside buckets.
+Common use cases include:
+Backups
+Images and videos
+Logs
+Static website files
+Data lakes
+Application assets
+Cloud Storage provides different storage classes based on access patterns and cost requirements.
+
+8. What is a VPC?
+--> VPC stands for Virtual Private Cloud. It provides networking capabilities for GCP resources.
+A VPC can contain:
+Subnets
+Routes
+Firewall rules
+VPN connections
+Cloud NAT
+Load balancers
+one important GCP characteristic is that VPC networks are global, while subnets are regional.
+
+9. What is the difference between a VPC and a subnet?
+--> A VPC is the overall virtual network.
+A subnet is a regional subdivision of that network containing IP address ranges.
+For example:
+VPC
+ ├── Subnet - Region A
+ ├── Subnet - Region B
+ └── Subnet - Region C
+
+Resources such as VMs are attached to subnets.
+
+10. What is a firewall rule in GCP?
+--> A firewall rule controls network traffic to or from resources in a VPC.
+Rules can control:
+Source/destination
+Protocol
+Port
+Direction
+Targets
+For example, we might allow TCP port 443 for HTTPS traffic while blocking unnecessary inbound traffic.
+
+11. What is Cloud NAT?
+--> Cloud NAT allows resources that don't have external IP addresses to initiate outbound connections to the internet.
+For example:
+Private VM
+    |
+    v
+Cloud NAT
+    |
+    v
+Internet
+
+The VM remains private while still being able to download updates or access external services.
+
+12. What is a Load Balancer?
+--> A load balancer distributes incoming traffic across backend resources.
+It can provide:
+High availability
+Scalability
+Traffic distribution
+Health checking
+TLS/SSL termination
+
+For example:
+
+Users
+  |
+  v
+Load Balancer
+  |
+  +---- VM 1
+  +---- VM 2
+  +---- VM 3
+
+13. What is Cloud SQL?
+--> loud SQL is a managed relational database service supporting databases such as:
+MySQL
+PostgreSQL
+SQL Server
+Google manages many infrastructure tasks such as backups, maintenance, and high-availability options.
+
+14. What is Pub/Sub?
+--> Pub/Sub is a messaging service based on the publish-subscribe model.
+A publisher sends a message to a topic, and subscribers consume messages through subscriptions.
+Application
+    |
+    v
+  Topic
+    |
+    +---- Subscription A
+    |
+    +---- Subscription B
+
+It is useful for asynchronous and event-driven architectures.
+
+16. Cloud Run vs Compute Engine?
+-->
+
+Cloud Run	Compute Engine
+Serverless	VM-based
+Runs containers	Runs virtual machines
+Google manages infrastructure	More infrastructure control
+Automatic scaling	You manage VM configuration/scaling
+Good for stateless applications	Good when OS/VM-level control is required
+
+I would choose Cloud Run when I want to deploy a containerized application without managing servers.
+
+17. What is GKE?
+-->GKE stands for Google Kubernetes Engine. It is Google's managed Kubernetes service.
+It allows us to deploy and manage containerized applications using Kubernetes.
+Important concepts include:
+Pods
+Deployments
+Services
+Ingress
+ConfigMaps
+Secrets
+Nodes
+
+18. What is the difference between GKE and Cloud Run?
+-->GKE provides Kubernetes and greater control over container orchestration.
+Cloud Run provides a simpler serverless platform for running containers.
+I would generally choose:
+Cloud Run for simpler stateless containerized applications.
+GKE when I need Kubernetes capabilities, complex orchestration, or more control over workloads and Networking.
+
+19. How would you secure a GCP environment?
+--> I would use multiple layers of security:
+Apply least-privilege IAM.
+Use service accounts for workloads.
+Avoid hardcoded credentials.
+Store secrets in Secret Manager.
+Use VPC firewall rules.
+Keep sensitive workloads private where possible.
+Enable logging and monitoring.
+Use organization policies where appropriate.
+Regularly review IAM permissions.
+Use encryption and appropriate key-management controls when required.
+
