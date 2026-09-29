@@ -1,0 +1,47 @@
+
+Control structure:
+1. Conditional statment: if, if-else, elif
+2. Loop: For, while, until
+
+1. Conditional statmnet:
+syntax: if-else
+
+if [ condition ]
+then
+            #statment if the condition is true
+else
+            #statemnt if the condition is false
+fi
+
+*common operatores and conditions*
+
+1. Numrical operators:
+
+operators                 meanings
+  -eq                    equal to
+  -ne                    not equal
+  -gt                    grater than
+  -lt                    less than
+  -ge                    grater than equal to
+  -le                    less than equal to
+
+
+  2. String operators
+
+operators                  meanings
+   =                       equal 
+   !=                      not equal
+   -z                      string is empty
+   -n                      string is not empty
+
+  3. file operators
+
+  operators                meanings
+    -f                      regular file exist
+    -d                      directory exists
+    -e                       file/dir  exists
+    -r                       readable
+    -w                      writable
+    -x                      executable
+
+    

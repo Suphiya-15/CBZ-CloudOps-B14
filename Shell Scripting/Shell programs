@@ -43,3 +43,59 @@ is
 multi
 line
 comment
+
+-------------------------------------------------------------------------------------------------------
+
+script 5 : user input
+
+#!/bin/bash
+
+echo "Enter your name:"
+read name
+
+echo "Name is $name"
+
+------------------------------------------------------------------------------------------------------
+
+script 6 : argument passing
+
+#argument passing means giving some values to a shell script when we run the script.
+#Positional paramaters
+
+variable            meaning
+   $0             script name
+   $1             First argument
+   $2             Second argument
+   $3             third argument
+   $#             no of argument
+   $@             All arguments
+
+   #!/bin/bash
+
+   echo "First argument is: $1"
+   echo "Second argument is: $2"
+   echo "Third argument is: $3"
+   echo "All arguments are: $@"
+   echo "No of arguments: $#"
+
+   -----------------------------------------------------------------------------------------------------
+    script 7 : devops script
+
+    #!/bin/bash
+
+    cp $1 $2 
+    echo "file copied successfully"
+
+    ----------------------------------------------------------------------------------------------------
+
+    script 8 : command substitution
+
+    #run a command and substitute its output into another command or variable
+
+    today=$(date)
+    echo "Todays date is: $today"
+    echo "your current working directory is $(pwd)"
+
+    ----------------------------------------------------------------------------------------------------
+    
+
