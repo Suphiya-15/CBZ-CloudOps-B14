@@ -44,4 +44,31 @@ operators                  meanings
     -w                      writable
     -x                      executable
 
+
+  Loops:
+
+  1. for loop:
+  syntax:
+  for items in list
+  do 
+       #commads
+  done
+
+  2. while loop
+
+  while [ condition ]
+  do
+        #commands
+  done
+
+  3. until loop
+
+  until [ condition ]
+  do 
+       #commands
+  done
+  
+
+
+
     

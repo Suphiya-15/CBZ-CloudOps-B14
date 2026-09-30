@@ -98,4 +98,86 @@ variable            meaning
 
     ----------------------------------------------------------------------------------------------------
     
+    script 9 : if-else-basic-prog
+
+    echo "Enter your age:"
+    read age
+
+    if [ $age -ge 18 ]
+    then
+           echo "You  can VOTE.."
+      else
+           echo "You CANNOT VOTE.."
+    fi
+
+    ----------------------------------------------------------------------------------------------------
+
+    script 10 : file example
+
+    file="demo"
+
+    if [ -f $file ]
+    then 
+            echo "file exist.."
+    elif [ -d $file ]
+    then
+            echo "It is directory, not a file!"
+    else
+            echo "file not found"
+   ----------------------------------------------------------------------------------------------------
+
+   script 11 :  
+
+   #!/bin/bash
+
+   if [ $(id -u) -ne 0 ]
+   then
+          echo "you must run this script as a root user"
+   else
+          echo "you are root. script can continue"
+
+-------------------------------------------------------------------------------------------------------
+
+script 12 : for loop 
+
+for server in web1 web2 web3 web4
+do
+       echo "Cheking $server"
+done
+
+--------------------------------------------------------------------------------------------------------
+
+script 13: create multiple user usinf for loop
+
+for user in seema atul mahesh
+do
+     sudo useradd $user
+     echo "$user created"
+done
+
+--------------------------------------------------------------------------------------------------------
+
+script 14: while loop
+
+count=0
+num=10
+
+while [ $count -le $num ]
+do
+       echo "value is $count"
+       let count++
+done
+--------------------------------------------------------------------------------------------------------
+
+script 15 : until loop
+
+a=10
+
+until [ $a -eq 1 ]
+do
+      echo "value of a is $a"
+      let a--
+done
+---------------------------------------------------------------------------------------------------
+
 
