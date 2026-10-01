@@ -1,0 +1,10 @@
+file handling:
+--> in shell scripting reading from a file means taking data from a file and using it in the script.
+--> writing data to a file means storing output/data in a file.
+
+*writing to a file:
+1. > = create/overwrite a file
+---> if file does not exist, it is created. and if it already exists, its old content is overwritten
+
+2. >> = append to a file
+--> this adds the text at the end of the file.

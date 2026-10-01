@@ -180,4 +180,79 @@ do
 done
 ---------------------------------------------------------------------------------------------------
 
+script 16 : read file
 
+#!/bin/bash
+
+filename="demo.txt"
+filecontent=$(cat $filename)
+
+echo "Your File Contents: "
+echo "$filecontent"
+
+----------------------------------------------------------------------------------------------------
+
+script 17 : read file using for loop
+
+filename="demo.txt"
+
+for name in $(cat $filname)
+do
+        echo "name is : $name"
+done
+
+-----------------------------------------------------------------------------------------------------
+
+script 18: write to a file
+
+echo "this is sample file created using shell scripting" >file.txt
+
+#to append:
+echo "Applend this line using shelll scripting"  >>file.txt
+-----------------------------------------------------------------------------------------------------
+
+script 19: user input
+
+#!/bin/bash
+echo "Enter filename:"
+read filename
+
+echo "Enter data:"
+read data
+
+echo "$data" >>$filename
+
+-------------------------------------------------------------------------------------------------
+
+script 20: EOF --> here document
+
+#!/bin/bash
+
+cat << EOF >> test.txt
+this is first line
+this second line
+this is the third line
+EOF
+
+#<< EOF indicates a here document where EOF is the delimiter
+#everything between two EOF goes into test.txt
+
+--------------------------------------------------------------------------------------------------
+
+script 21 :
+
+#!/bin/bash
+echo "Enter data. press ctrl+d when finished"
+cat > myfile.txt
+echo "File created successfully"
+-----------------------------------------------------------------------------------------------
+
+HW script 22: server report
+
+1. hostname
+2. memory info
+3. uptime
+4. disk info
+---> server_report.txt
+
+---------------------------------------------------------------------------------------------
