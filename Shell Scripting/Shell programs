@@ -256,3 +256,111 @@ HW script 22: server report
 ---> server_report.txt
 
 ---------------------------------------------------------------------------------------------
+
+script 23 : basic function example
+
+#!/bin/bash
+
+greet()
+{
+       echo "Hello evryone.."
+}
+
+
+greet
+greet
+-----------------------------------------------------------------------------------------------
+
+script 24: server information
+
+#!/bin/bash
+
+server_info()
+{
+       echo "Hostname:"
+       hostname
+
+       echo "Current user:"
+       whomi
+
+       echo "Date:"
+       date
+}
+
+
+server_info
+
+-------------------------------------------------------------------------------------------------
+
+#!/bin/bash
+
+check_disk()
+{
+       echo "Disk usage:"
+       df -h /
+}
+
+check_disk
+
+-------------------------------------------------------------------------------------------------
+
+script 26: argument passing in function
+
+#!/bin/bash
+
+sum()
+{
+       num1=$1
+       num2=$2
+       addition=$((num1+num2))
+       echo "Sum of $num1 and $num2 is $addition"
+}
+
+sum 100 12
+sum 45 45
+sum 34 65
+
+
+# $((..)) is used to do arithmatic operations in bash
+
+--------------------------------------------------------------------------------------------------
+
+script 27:
+
+#!/bin/bash
+
+check_service()
+{
+       systemctl is-active $1
+       if [ $? -eq 0 ]
+       then
+                 echo "$1 is runnning"
+              else
+                 echo "$1 is not running"
+       fi
+}
+
+check_service httpd
+check_service nginx
+check_service ssh
+check_service docker
+
+# #? means the exit status of the last executed command
+# it tells us whether the pervious command was successful or failed
+
+-----------------------------------------------------------------------------------------------------
+
+script 28:
+
+mul()
+{
+       num1=$1
+       num2=$2
+       num3=$3
+       multiplication=$((num1*num2*num3))
+       echo $multiplication
+}
+
+result=$(mul 1 2 3)
+echo "$result"
+------------------------------------------------------------------------------------------------

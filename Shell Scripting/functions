@@ -1,0 +1,13 @@
+function syntax:
+--> function_name()
+{
+    #commands
+}
+
+function function_name()
+{
+    #command
+}
+
+
+
