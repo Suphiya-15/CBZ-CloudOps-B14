@@ -1,0 +1,27 @@
+
+--> Debugging in shell scripting is the process of finding and fixing errors or
+    unexpected behavior in a shell script.
+--> When a script does not work as expected, debugging helps you understand which commands are running, what values variables contain, and where the problem occurs.
+
+--> Why is debugging useful?
+1. Debugging is useful because it helps you:
+2. Find errors in the script quickly.
+3. Track the execution of commands step by step.
+4. Check variable values and conditions.
+5. Identify logical mistakes, even when there are no syntax errors.
+6. Verify that commands are executed in the expected order.
+7. Save time when working with large or complex scripts.
+
+**Common debugging options:
+1. set -x:
+--> The -x option prints each command before it is executed.
+--> This makes it easier to see what the shell is actually doing.
+
+2. set -e:
+--> set -e tells the shell to exit the script immediately when a command fails 
+-->Without set -e, the shell would normally continue executing the next command.
+
+--> Why is set -e useful?
+1. Prevents the script from continuing after an important command fails.
+2. Helps detect errors early.
+3. Makes scripts safer and more predictable.
