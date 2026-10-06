@@ -364,3 +364,73 @@ mul()
 result=$(mul 1 2 3)
 echo "$result"
 ------------------------------------------------------------------------------------------------
+
+script 29: case statemnt
+
+#!/bin/bash
+
+echo "Provide Options:"
+echo "AWS"
+echo "Azure"
+echo "GCP"
+echo "Select options:"
+read choice
+
+case $choice in
+     AWS)
+      echo "You selected AWS"
+      ;;
+
+     Azure)
+      echo "You selected Azure"
+      ;;
+
+      GCP)
+      echo "You selected GCP"
+      ;;
+
+      *)
+      echo "Please enter valid Input"
+      ;;
+esac
+
+--------------------------------------------------------------------------------------------------
+
+script 30:
+
+#/bin/bash
+
+select choice in AWS Azure GCP Exit 
+do
+     echo "You selected: $choice"
+done
+--------------------------------------------------------------------------------------------------
+script 31:
+
+#!/bin/bash
+PS3="Select an Option:"
+select option in "check disk" "check memory" "check CPU" "exit"
+do
+    case $option in
+         check disk) 
+                   df -h
+                  ;;
+         check memory)
+                   free -h
+                   ;;
+         check CPU)
+                   uptime 
+                  ;;
+         exit)
+              echo "Exiting server mangement tool"
+              break
+              ;;
+          *)
+             echo "Invalid Input"
+             ;;
+       esac
+done
+
+#PS3 is a special bash variable used with select statment
+#it defins the msg that bash displays when it asks the user to select an option
+

@@ -1,0 +1,41 @@
+                                 case and select stament
+
+1. case statment:
+ --> the case statment is used when we want to choose one option from multiple possiblities.
+ syntax:
+
+ case <$variable> in
+      pattern-1)
+              commmands
+              ;;
+      pattern-2)
+               commands
+               ;;
+      pattern-3)
+              commmands
+              ;;
+      *)
+         deafult commands
+         ;;
+ esac
+
+ here,
+ case : start of statemnt
+ $variable : value we want to check
+ pattern-1/pattern-2 : are matching patterns
+ ) : ends the pattern
+ ;; : ends the option
+ * : default option
+ esac : ends the case statment(case written backwords)
+
+
+ 2. select statment:
+ --> select statment is used to creat a simple menu automatically in bash.
+ --> with select bash automatically displays the options with numbers.
+
+ syntax:
+
+ select  variable in option1 option2 option3
+ do
+        commands
+done
