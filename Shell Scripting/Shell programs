@@ -434,3 +434,63 @@ done
 #PS3 is a special bash variable used with select statment
 #it defins the msg that bash displays when it asks the user to select an option
 
+--------------------------------------------------------------------------------------------------
+
+Script 32: real devops backup script
+
+#!/bin/bash
+
+source="/mnt/demo.txt"
+dest="backups"
+log="/var/log/backup.log"
+
+timestamp=$(date +"%y-%m-%d_%H:%M:%S")
+
+mkdir -p $dest
+
+tar -czf $dest/backup_${timestamp}.tar.gz $source
+
+if [ $? -eq 0 ]
+then 
+       echo "$timestamp: Backup Successful" >> $log
+       else
+       echo "$timestamp: Backup Failed" >> $log
+fi 
+
+----------------------------------------------------------------------------------------------------
+
+Script 33: service health checkup
+
+#!/bin/bash
+
+service=$1
+log="/var/log/service_status.log"
+
+check_service()
+{
+       if systemctl is-active --quiet $service
+       then
+               echo "$(date): $service is RUNNING" >> $log
+       else
+              echo "$(date): $service is NOT RUNING. Restarting...." >> $log
+              systemctl restart $service
+
+              if [ $? -eq 0 ]
+              then 
+                    echo "$(date): $service restarted successfullly" >> $log
+              else
+                    echo "$(date): Failed to restart $service" >> $log
+              fi
+       fi 
+}
+
+if [ -z $service ]
+then
+      echo "Please provide a service name"
+      else
+      check_service
+      echo "Service Status is saved in log file"
+fi  
+
+
+
